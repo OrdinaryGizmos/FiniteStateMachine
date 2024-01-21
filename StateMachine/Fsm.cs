@@ -35,7 +35,7 @@ namespace StateMachine
 {
 	public class Fsm<TS, TT>
 	{
-		private FsmModel<TS, TT> Model { get; } = new FsmModel<TS, TT>();
+		public FsmModel<TS, TT> Model { get; } = new FsmModel<TS, TT>();
 
 		public State<TS, TT> Current => Model.Current;
 		public State<TS, TT> StartState => Model.StartState;

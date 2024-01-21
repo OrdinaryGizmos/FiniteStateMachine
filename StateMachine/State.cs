@@ -68,10 +68,10 @@ namespace StateMachine
             return this;
         }
 
-        public State<TS, TT> AddTransisionOn(TT trigger, TS target)
+        public State<TS, TT> AddTransitionOn(TT trigger, TS target)
             => Add(new Transition<TS, TT>(trigger, Identifier, target));
 
-        public State<TS, TT> AddPopTransisionOn(TT trigger) => Add(new Transition<TS, TT>(trigger, Identifier));
+        public State<TS, TT> AddPopTransitionOn(TT trigger) => Add(new Transition<TS, TT>(trigger, Identifier));
 
         public Transition<TS, TT> Process(TT input)
         {
